@@ -1,0 +1,169 @@
+@font-face { 
+  font-family: "Nautilus";
+  src: url("fonts/nautilus/Nautilus.otf");
+}
+
+body {
+  margin: 0;
+  /*font-family: 'Freestyle', arial;*/
+  font-size: 26px;
+}
+
+.first-page {
+  color: white;
+  width: 100%;
+  height: 630px;
+  z-index: 1;
+  background-image: url('img/wall-blur.jpg');
+  background-size: cover;
+}
+
+.card {
+  padding-top: 35px;
+  text-align: center;
+  font-family: Nautilus;
+  
+}
+
+.card-head {
+  /*font-family: 'CAC Champagne', arial;*/
+  font-family: 'Playfair Display', serif;
+  font-size: 100px;
+  margin-top: 30px;
+}
+
+.and { color: crimson; }
+
+.card-date {
+  margin-top: 70px;
+  font-size: 46px;
+}
+
+table {
+  color: white;
+  font-size: 42px !important;
+  outline: none;
+  border-collapse:collapse;
+  margin: 60px auto 0 auto;
+  text-align: center;
+  font-size: inherit;
+}
+
+td { padding: 3px 8px 3px 8px; }
+
+.colon { width: 10px; }
+
+.second-page {
+  width: 100%;
+  height: 330px;
+  display: flex;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.person {
+  margin: 70px 180px 0 180px;
+}
+
+.portrait {
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.person-desc {
+  text-align: center;
+}
+
+.desc-head {
+  font-size: 36px;
+}
+
+.third-page {
+  width: 100%;
+  height: 280px;
+  background-color:gainsboro;
+}
+
+.slider {
+  width: 100%;
+  height: 160px;
+}
+
+.fourth-page {
+  width: 100%;
+  height: 350px;
+  background-color:white;
+}
+
+.invitation {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.fifth-page {
+  width: 100%;
+  height: 300px;
+  background-color:gainsboro;
+}
+
+.dress-code {
+  padding-top: 60px;
+  text-align: center;
+}
+
+.sixth-page {
+  width: 100%;
+  height: 400px;
+  background-color:white;
+  display: flex;
+  justify-content: center;
+}
+
+.map {
+  margin: 0 10px 0 10px;
+}
+
+.map-desc {
+  margin: 100px 10px 0 10px;
+  line-height: 40px;
+  font-size: 20px;
+}
+
+img { outline: none; }
+
+.slider {
+  width: 95%;
+  margin: 100px auto;
+  height: 280px;
+}
+
+.slick-slide {
+  margin: 0px 20px;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+
+.slick-slide {
+  transition: all ease-in-out .3s;
+  opacity: .2;
+}
+
+.slick-active {
+  opacity: 1;
+}
+
+.slick-current {
+  opacity: 1;
+}
