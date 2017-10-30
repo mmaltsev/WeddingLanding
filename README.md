@@ -1,2 +1,4 @@
 # WeddingLanding
-Website for wedding invitation based on Bootstrap.
+Wedding invitation website.
+
+Dependencies - JQuery, Slick.
