@@ -1,12 +1,12 @@
 <html>
   <head>
       <title>Приглашение на свадьбу</title>
-      <!--link href="http://allfont.ru/allfont.css?fonts=freestyle" rel="stylesheet" type="text/css" />
-      <link href="http://allfont.ru/allfont.css?fonts=cac-champagne" rel="stylesheet" type="text/css" /-->
-      <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="js/slick-1.8.0/slick/slick.css">
-      <link rel="stylesheet" type="text/css" href="js/slick-1.8.0/slick/slick-theme.css">
-      <link href="style.css" rel="stylesheet" type="text/css" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+      <link rel="stylesheet" type="text/css" href="css/style.css" />
+      <link rel="stylesheet" type="text/css" href="css/slick.css">
+      <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+      <link rel="stylesheet" type="text/css" href="css/slick-custom.css">
       <link rel="shortcut icon" href="img/favicon.ico">
   </head>
   <body>
@@ -70,24 +70,12 @@
 
     <div class="third-page">
       <section class="regular slider">
-        <div>
-          <img src="img/photos/photo.jpg">
-        </div>
-        <div>
-          <img src="img/photos/photo5.jpg">
-        </div>
-        <div>
-          <img src="img/photos/photo2.jpg">
-        </div>
-        <div>
-          <img src="img/photos/photo4.jpg">
-        </div>
-        <div>
-          <img src="img/photos/photo3.jpg">
-        </div>
-        <div>
-          <img src="img/photos/photo1.jpg">
-        </div>
+        <div><img src="img/photos/photo1.jpg" /></div>
+        <div><img src="img/photos/photo2.jpg" /></div>
+        <div><img src="img/photos/photo3.jpg" /></div>
+        <div><img src="img/photos/photo4.jpg" /></div>
+        <div><img src="img/photos/photo5.jpg" /></div>
+        <div><img src="img/photos/photo6.jpg" /></div>
       </section>
     </div>
 
@@ -120,76 +108,19 @@
       </div>
     </div>
 
-
-    <script>
-      let wdDate = new Date('Sat Jan 20 2018 18:00:00 GMT+0300 (FET)')
-      // let wdDate = new Date('Sat Oct 27 2017 20:30:00 GMT+0300 (FET)')
-      counter(wdDate)
-      setInterval(function() {
-        counter(wdDate)
-      }, 30000)
-
-      setInterval(function() {
-        let colons = document.getElementsByClassName('colon')
-        for (let i = 0; i < colons.length; i ++) {
-          if (colons[i].innerHTML === ':') colons[i].innerHTML = ''
-          else colons[i].innerHTML = ':'
-        }
-      }, 1000)
-
-      function counter(wdDate) {
-        let currDate = new Date()
-        let timeDiff = Math.abs(wdDate.getTime() - currDate.getTime())
-        let dateDiff = Math.floor(timeDiff / (1000 * 3600 * 24))
-        let hourDiff = Math.floor(timeDiff / (1000 * 3600)) % 24
-        let minDiff = Math.floor(timeDiff / (1000 * 60)) % 60
-        HTMLUpdate(dateDiff, hourDiff, minDiff)
-      }
-
-      function HTMLUpdate(dateDiff, hourDiff, minDiff) {
-        // if (dateDiff < 10) dateDiff = '0' + dateDiff
-        // if (hourDiff < 10) hourDiff = '0' + hourDiff
-        // if (minDiff < 10) minDiff = '0' + minDiff
-
-        if (dateDiff % 10 > 4 || dateDiff % 10 === 0) {
-          document.getElementById('day-desc').innerHTML = 'Дней'
-        } else if (dateDiff % 10 > 1) {
-          document.getElementById('day-desc').innerHTML = 'Дня'
-        } else {
-          document.getElementById('day-desc').innerHTML = 'День'
-        }
-        if (hourDiff % 10 > 4 || hourDiff % 10 === 0) {
-          document.getElementById('hour-desc').innerHTML = 'Часов'
-        } else if (hourDiff % 10 > 1) {
-          document.getElementById('hour-desc').innerHTML = 'Часа'
-        } else {
-          document.getElementById('hour-desc').innerHTML = 'Час'
-        }
-        if (minDiff % 10 > 4 || minDiff % 10 === 0) {
-          document.getElementById('min-desc').innerHTML = 'Минут'
-        } else if (minDiff % 10 > 1) {
-          document.getElementById('min-desc').innerHTML = 'Минуты'
-        } else {
-          document.getElementById('min-desc').innerHTML = 'Минута'
-        }
-        document.getElementById('day').innerHTML = '' + dateDiff
-        document.getElementById('hour').innerHTML = '' + hourDiff
-        document.getElementById('min').innerHTML = '' + minDiff
-      }
+    <script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/myFunctions.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(document).on('ready', function() {
+        setCounter()
+        $(".regular").slick({
+          dots: false,
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 3
+        })
+      })
     </script>
-
-<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-<script src="js/slick-1.8.0/slick/slick.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript">
-  $(document).on('ready', function() {
-    $(".regular").slick({
-      dots: false,
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 3
-    });
-  });
-</script>
-
   </body>
 </html>
