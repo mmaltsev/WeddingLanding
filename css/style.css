@@ -1,7 +1,10 @@
 body {
   margin: 0;
-  font-size: 26px;
+  font-size: 24px;
+  font-family: Gotham Pro;
 }
+
+h1, h2, h3, h4 { font-family: Nautilus; }
 
 .first-page {
   color: white;
@@ -67,21 +70,13 @@ td { padding: 3px 8px 3px 8px; }
 
 .person-desc { text-align: center; }
 
-.desc-head { font-size: 36px; }
+.desc-head { font-size: 36px; font-family: Nautilus; }
 
 .desc-desc {
   margin-top: 20px;
   font-size: 18px;
   line-height: 20px;
 }
-
-/*.portrait {
-  width: 150px;
-  height: 150px;
-  border: 1px solid black;
-  border-radius: 50%;
-  margin: 0 auto;
-}*/
 
 .third-page {
   min-height: 280px;
@@ -114,7 +109,7 @@ td { padding: 3px 8px 3px 8px; }
 }
 
 .sixth-page {
-  min-height: 550px;
+  min-height: 350px;
   background-color:white;
   display: flex;
   justify-content: center;
@@ -124,7 +119,7 @@ td { padding: 3px 8px 3px 8px; }
 .map-script-mobile { display: none; }
 
 .map-desc {
-  margin-top: 100px;
+  margin: 100px 0 0 40px;
   line-height: 40px;
   font-size: 20px;
 }
@@ -146,5 +141,9 @@ td { padding: 3px 8px 3px 8px; }
   /* Sixth page */
   .sixth-page { flex-direction: column; }
   .map-script-pc { display: none; }
-  .map-script-mobile { display: initial; }
+  .map-script-mobile { 
+    display: initial;
+    margin: 0 auto;
+  }
+  .map-desc { margin: 20px auto 0 auto; }
 }

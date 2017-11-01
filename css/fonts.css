@@ -2,6 +2,11 @@
   font-family: "Nautilus";
   src: url("fonts/nautilus/nautilus.otf");
 }
+
+@font-face { 
+  font-family: "Gotham Pro";
+  src: url("fonts/gothampro/gothampro.ttf");
+}
   
 /* cyrillic Playfair Display*/
 @font-face {
