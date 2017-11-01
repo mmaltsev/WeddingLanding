@@ -12,7 +12,6 @@
   color: black;
 }
 
-
 .slick-slide {
   transition: all ease-in-out .3s;
   opacity: .2;
@@ -20,3 +19,8 @@
 
 .slick-active { opacity: 1; }
 .slick-current { opacity: 1; }
+
+
+@media screen and (max-device-width: 640px) {
+  .slider { display: none; }
+}
