@@ -1,3 +1,43 @@
+function setGuests() {
+  guestArr = [{
+      names: ['Мама', 'Папа'],
+      sex: '',
+    }, {
+      names: ['Максим'],
+      sex: 'm',
+    }, {
+      names: ['Леночка', 'Саша', 'Ваня'],
+      sex: '',
+    }, {
+      names: ['Маша'],
+      sex: 'f',
+    }
+  ]
+  guestId = +window.location.search.substr(4)
+  let guests = guestArr[guestId]
+  let dearEl = document.getElementById('dear')
+  let guestEl = document.getElementById('guests')
+  if (guests.names.length > 1) {
+    dearEl.innerText = 'Дорогие'
+    guestEl.innerHTML = ''
+    for (let j=0; j < guests.names.length; j++) {
+      guestEl.innerHTML += '<u>' + guests.names[j] + '</u>'
+      if (j < guests.names.length - 2) {
+        guestEl.innerHTML += ', '
+      } else if (j == guests.names.length - 2) {
+        guestEl.innerHTML += ' и '
+      }
+    }
+  } else {
+    if (guests.sex == 'm') {
+      dearEl.innerText = 'Дорогой'
+    } else {
+      dearEl.innerText = 'Дорогая'
+    }
+    guestEl.innerHTML =  '<u>' + guests.names[0] + '</u>'
+  }
+}
+
 function setCounter() {
   let wdDate = new Date('Sat Jan 20 2018 18:00:00 GMT+0300 (FET)')
   dayCalc(wdDate)
@@ -8,8 +48,8 @@ function setCounter() {
   setInterval(function() {
     let colons = document.getElementsByClassName('colon')
     for (let i = 0; i < colons.length; i ++) {
-      if (colons[i].innerHTML === ':') colons[i].innerHTML = ''
-      else colons[i].innerHTML = ':'
+      if (colons[i].innerText === ':') colons[i].innerText = ''
+      else colons[i].innerText = ':'
     }
   }, 1000)
 }
@@ -24,22 +64,22 @@ function dayCalc(wdDate) {
 }
 
 function HTMLUpdate(dateDiff, hourDiff, minDiff) {
-  let dayDesc = document.getElementById('day-desc').innerHTML
+  let dayDesc = document.getElementById('day-desc').innerText
   if (dateDiff % 10 > 4 || dateDiff % 10 === 0) dayDesc = 'Дней'
   else if (dateDiff % 10 > 1)                   dayDesc = 'Дня'
   else                                          dayDesc = 'День'
 
-  let hourDesc = document.getElementById('hour-desc').innerHTML
+  let hourDesc = document.getElementById('hour-desc').innerText
   if (hourDiff % 10 > 4 || hourDiff % 10 === 0) hourDesc = 'Часов'
   else if (hourDiff % 10 > 1)                   hourDesc = 'Часа'
   else                                          hourDesc = 'Час'
 
-  let minDesc = document.getElementById('min-desc').innerHTML
+  let minDesc = document.getElementById('min-desc').innerText
   if (minDiff % 10 > 4 || minDiff % 10 === 0) minDesc = 'Минут'
   else if (minDiff % 10 > 1)                  minDesc = 'Минуты'
   else                                        minDesc = 'Минута'
 
-  document.getElementById('day').innerHTML = '' + dateDiff
-  document.getElementById('hour').innerHTML = '' + hourDiff
-  document.getElementById('min').innerHTML = '' + minDiff
+  document.getElementById('day').innerText = '' + dateDiff
+  document.getElementById('hour').innerText = '' + hourDiff
+  document.getElementById('min').innerText = '' + minDiff
 }

@@ -87,7 +87,7 @@
 
     <div class="fourth-page">
       <div class="invitation">
-        <h3>Дорогие <u>Руслан</u> и <u>Людмила</u></h3>
+        <h3><span id="dear">Дорогие</span> <span id="guests">Гости</span>!</h3>
         <p>Мы с огромным удовольствием приглашаем вас</p>
         <p><b>20 января 2017 года в 18:00</b></p>
         <p>Окунуться в атмосферу сказочного праздника</p>
@@ -124,6 +124,7 @@
     <script src="js/custom.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
       $(document).on('ready', function() {
+        setGuests()
         setCounter()
         $(".regular").slick({
           dots: false,

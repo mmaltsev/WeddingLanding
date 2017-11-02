@@ -89,7 +89,7 @@ td { padding: 3px 8px 3px 8px; }
 }
 
 .fourth-page {
-  min-height: 350px;
+  min-height: 310px;
   background-color: #f5e7d3;
   padding: 20px 10px;
 }
@@ -119,7 +119,7 @@ td { padding: 3px 8px 3px 8px; }
 .map-script-mobile { display: none; }
 
 .map-desc {
-  margin: 100px 0 0 40px;
+  margin: 70px 0 0 40px;
   line-height: 40px;
   font-size: 20px;
 }
