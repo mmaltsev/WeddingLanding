@@ -1,5 +1,5 @@
 function setGuests() {
-  guestArr = [{
+  let guestArr = [{
       names: ['Гости'],
       sex: 'p',
     }, {
@@ -16,7 +16,7 @@ function setGuests() {
       sex: 'f',
     }
   ]
-  guestId = +window.location.search.substr(4)
+  let guestId = +window.location.search.substr(4)
   let guests = guestArr[guestId] || guestArr[0]
   let dearEl = document.getElementById('dear')
   let guestEl1 = document.getElementById('guest1')
