@@ -69,8 +69,8 @@ function setCounter() {
   setInterval(function() {
     let colons = document.getElementsByClassName('colon')
     for (let i = 0; i < colons.length; i ++) {
-      if (colons[i].textContent  === ':') colons[i].textContent  = ''
-      else colons[i].textContent  = ':'
+      if (colons[i].text()  === ':') colons[i].text()  = ''
+      else colons[i].text()  = ':'
     }
   }, 1000)
 }
