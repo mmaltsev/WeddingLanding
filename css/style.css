@@ -87,10 +87,13 @@ td { padding: 3px 8px 3px 8px; }
   background-color: white
 }
 
-.slider { width: 100%; }
-
-.photo-slider { display: initial; }
+.photo-slider { display: flex; }
 .photo-static { display: none; }
+
+.slider {
+  width: 100%;
+  align-self: center;
+}
 
 /* Fourth page */
 .fourth-page {
@@ -100,8 +103,8 @@ td { padding: 3px 8px 3px 8px; }
 }
 
 .invitation { text-align: center; }
-
 .invitation-text { font-weight: bold; }
+.invitation-date { font-size: 38px; }
 
 /* Fifth page */
 .fifth-page {
@@ -113,6 +116,7 @@ td { padding: 3px 8px 3px 8px; }
 }
 
 .dress-code { text-align: center; }
+.dress-code-text { font-weight: bold; }
 
 /* Sixth page */
 .sixth-page {
@@ -129,7 +133,7 @@ td { padding: 3px 8px 3px 8px; }
 .map-desc { margin: 70px 0 0 40px; }
 
 
-@media screen and (max-device-width: 640px) {
+@media screen and (max-device-width: 670px) {
   body {
     font-size: 24px;
     line-height: 60px;
@@ -152,6 +156,21 @@ td { padding: 3px 8px 3px 8px; }
   /* Third page */
   .photo-slider { display: none; }
   .photo-static { display: initial; }
+  
+  .first-photo-line, .third-photo-line {
+    display: flex;
+    justify-content: space-around;
+  }  
+  .second-photo-line {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+
+  .photo {
+    width: 45%;
+    align-self: center;
+  }
 
   /* Fourth page */
   .fourth-page {
@@ -159,6 +178,7 @@ td { padding: 3px 8px 3px 8px; }
     background-image: url('../img/images/card-bg-mob.png');
     background-size: cover;
   }
+  .invitation-date { font-size: 28px; }
 
   /* Sixth page */
   .sixth-page { 
