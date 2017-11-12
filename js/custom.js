@@ -85,20 +85,23 @@ function dayCalc(wdDate) {
 }
 
 function HTMLUpdate(dateDiff, hourDiff, minDiff) {
-  var dayDesc = document.getElementById('day-desc').textContent 
+  var dayDesc = ''
   if (dateDiff % 10 > 4 || dateDiff % 10 === 0) dayDesc = 'Дней'
   else if (dateDiff % 10 > 1)                   dayDesc = 'Дня'
   else                                          dayDesc = 'День'
+  document.getElementById('day-desc').textContent = dayDesc
 
-  var hourDesc = document.getElementById('hour-desc').textContent 
+  var hourDesc = ''
   if (hourDiff % 10 > 4 || hourDiff % 10 === 0) hourDesc = 'Часов'
   else if (hourDiff % 10 > 1)                   hourDesc = 'Часа'
   else                                          hourDesc = 'Час'
+  document.getElementById('hour-desc').textContent = hourDesc
 
-  var minDesc = document.getElementById('min-desc').textContent 
+  var minDesc = ''
   if (minDiff % 10 > 4 || minDiff % 10 === 0) minDesc = 'Минут'
   else if (minDiff % 10 > 1)                  minDesc = 'Минуты'
   else                                        minDesc = 'Минута'
+  document.getElementById('min-desc').textContent = minDesc
 
   document.getElementById('day').textContent  = '' + dateDiff
   document.getElementById('hour').textContent  = '' + hourDiff

@@ -1,18 +1,20 @@
 body {
   margin: 0;
   font-size: 30px;
-  line-height: 70px;
+  line-height: 50px;
   font-family: Gotham Pro;
 }
 
 h1, h2, h3, h4 { font-family: Nautilus; }
 
+h1 { font-weight: 100; }
+
 /* First page */
 .first-page {
   color: white;
-  padding: 20px 10px 40px 10px;
+  padding: 10px 10px 10px 10px;
   margin: 0;
-  background-image: url('../img/images/wall-blur.jpg');
+  background-image: url('../img/bg1-2.png');
   background-size: cover;
 }
 
@@ -35,12 +37,25 @@ h1, h2, h3, h4 { font-family: Nautilus; }
   font-size: 46px;
 }
 
+.first-page-footer {
+  background-image: url('../img/bg1-3.png');
+  height: 150px;
+  background-size: cover;
+}
+
+.table-wrapper {
+  background-color: #f8f8f8;
+  background-image: url('../img/snow.png');
+  padding: 20px; 
+  font-family: Nautilus;
+}
+
 table {
-  color: white;
+  color: black;
   font-size: 42px !important;
   outline: none;
   border-collapse:collapse;
-  margin: 60px auto 0 auto;
+  margin: 0 auto;
   text-align: center;
   font-size: inherit;
 }
@@ -51,29 +66,46 @@ td { padding: 3px 8px 3px 8px; }
 
 /* Second page */
 .second-page {
-  background-color: #f8f8f8;
-  margin: 0;
-  padding: 20px 10px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+.first-subpage {
+  background-image: url('../img/bg2.png');
+  background-size: cover;
+  height: 380px;
+}
+
+.second-subpage {
+  background-color: #f8f8f8;
+  background-image: url('../img/snow.png');
+}
+
+.pal-photos {
+  width: 700px;
+  align-self: center;
+  position: absolute;
+  z-index: 0;
+}
+
+.subpage-content {
+  display: flex;
+  padding: 40px 0;
   justify-content: center;
 }
 
 .person {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  max-width: 300px;
-  margin: 40px;
+  width: 300px;
+  margin: 0 20px;
+  z-index: 1;
 }
 
-.round-photo {
-  align-self: center;
+.person-desc { text-align: left; }
+
+.desc-head {
+  font-size: 36px;
+  font-weight: 700;
 }
-
-.person-desc { text-align: center; }
-
-.desc-head { font-size: 36px; font-family: Nautilus; }
 
 .desc-desc {
   margin-top: 20px;
@@ -81,37 +113,35 @@ td { padding: 3px 8px 3px 8px; }
   line-height: 20px;
 }
 
-/* Third page */
-.third-page {
-  padding: 20px 10px;
-  background-color: white
-}
-
-.photo-slider { display: flex; }
-.photo-static { display: none; }
-
-.slider {
-  width: 100%;
-  align-self: center;
-}
-
 /* Fourth page */
 .fourth-page {
-  padding: 40px 10px 20px 10px;
-  background-image: url('../img/images/card-bg-pc-2.png');
+  padding: 40px 10px;
+  padding-left: 30%;
+  background-image: url('../img/bg3.png');
   background-size: cover;
+  color: white;
 }
 
-.invitation { text-align: center; }
+.invitation { text-align: center; line-height: 50px; }
 .invitation-text { font-weight: bold; }
 .invitation-date { font-size: 38px; }
+
+/* Four and a half */
+.rope-photos {
+  background-color: #f8f8f8;
+  background-image: url('../img/snow.png');
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+.collage { display: none; }
 
 /* Fifth page */
 .fifth-page {
   color: white;
-  background-color:gainsboro;
-  padding: 20px 10px;
-  background-image: url('../img/images/socks-new.png');
+  padding: 40px 10px;
+  padding-right: 30%;
+  background-image: url('../img/bg2.png');
   background-size: cover;
 }
 
@@ -121,6 +151,7 @@ td { padding: 3px 8px 3px 8px; }
 /* Sixth page */
 .sixth-page {
   background-color:#f8f8f8;
+  background-image: url('../img/snow.png');
   padding: 0 10px;
   display: flex;
   justify-content: center;
@@ -151,10 +182,11 @@ td { padding: 3px 8px 3px 8px; }
   .card-date { font-size: 30px; }
   .card-time { display: block; }
   table { font-size: 26px !important; }
+  td { padding: 0; }
 
   /* Second page */
   .second-page { flex-direction: column; }
-  .person { width: 100%; margin-bottom: 20px; }
+  .person { margin-bottom: 20px; }
   
   /* Third page */
   .photo-slider { display: none; }
@@ -175,13 +207,27 @@ td { padding: 3px 8px 3px 8px; }
     align-self: center;
   }
 
+  .first-subpage { height: 180px; }
+  .pal-photos { width: 100%; }
+
+  .subpage-content { flex-direction: column; }
+
   /* Fourth page */
   .fourth-page {
     padding: 10px;
-    background-image: url('../img/images/card-bg-mob-2.png');
+    background-image: url('../img/bg1-2.png');
     background-size: cover;
   }
   .invitation-date { font-size: 28px; }
+
+  .rope-photos { display: none; }
+  .collage {
+    display: block;
+    background-color:#f8f8f8;
+    background-image: url('../img/snow.png');
+  }
+
+  .fifth-page { padding: 40px 2px; }
 
   /* Sixth page */
   .sixth-page { 
