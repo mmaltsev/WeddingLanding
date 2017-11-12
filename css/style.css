@@ -220,7 +220,7 @@ td { padding: 3px 8px 3px 8px; }
   }
 
   .first-subpage { height: 180px; }
-  .pal-photos { width: 100%; }
+  .pal-photos { width: 100%; position: relative; margin-top: -190px; }
 
   .subpage-content { flex-direction: column; }
 
