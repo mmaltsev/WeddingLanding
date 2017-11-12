@@ -251,10 +251,13 @@ td { padding: 3px 8px 3px 8px; }
   .sixth-page { 
     flex-direction: column;
     padding: 0;
+    justify-content: center;
+    align-items: center;
   }
   .map-script-pc { display: none; }
   .map-script-mobile { 
     display: initial;
+    align-self: center;
     margin: 0 auto;
   }
   .map-desc { margin: 20px 10px 0 10px; text-align: center; }
