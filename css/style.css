@@ -219,8 +219,8 @@ td { padding: 3px 8px 3px 8px; }
     align-self: center;
   }
 
-  .first-subpage { height: 180px; }
-  .pal-photos { width: 100%; position: relative; margin-top: -190px; }
+  .first-subpage { height: 280px; }
+  .pal-photos { width: 100%; position: relative; margin-top: -280px; }
 
   .subpage-content { flex-direction: column; }
 
