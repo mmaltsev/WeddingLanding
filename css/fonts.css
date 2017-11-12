@@ -25,3 +25,9 @@
   src: url('fonts/slick/slick.eot');
   src: url('fonts/slick/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick/slick.woff') format('woff'), url('./fonts/slick/slick.ttf') format('truetype'), url('./fonts/slick/slick.svg#slick') format('svg');
 }
+
+/* Corinthia */
+@font-face {
+  font-family: 'Corinthia';
+  src: url('fonts/corinthia/Corinthia.ttf');
+}

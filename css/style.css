@@ -25,12 +25,16 @@ h1 { font-weight: 100; }
 }
 
 .card-head {
-  font-family: 'Playfair Display', serif;
+  /*font-family: 'Playfair Display', serif;*/
+  font-family: 'Corinthia', serif;
   font-size: 100px;
   margin-top: 30px;
 }
 
-.and { color: crimson; }
+.plus {
+  font-weight: 200;
+  margin: 0 5px;
+}
 
 .card-date {
   margin-top: 70px;
@@ -105,6 +109,8 @@ td { padding: 3px 8px 3px 8px; }
 .desc-head {
   font-size: 36px;
   font-weight: 700;
+  font-family: 'Corinthia', serif;
+  font-size: 60px;
 }
 
 .desc-desc {
@@ -139,14 +145,17 @@ td { padding: 3px 8px 3px 8px; }
 /* Fifth page */
 .fifth-page {
   color: white;
-  padding: 40px 10px;
-  padding-right: 30%;
+  padding: 30px 10px;
+  padding-right: 20%;
   background-image: url('../img/bg2.png');
   background-size: cover;
 }
 
 .dress-code { text-align: center; }
 .dress-code-text { font-weight: bold; }
+.dress-code-content { display: flex; }
+.rustic-pc { height: 350px; align-self: center; }
+.rustic-mobile { display: none; }
 
 /* Sixth page */
 .sixth-page {
@@ -163,6 +172,9 @@ td { padding: 3px 8px 3px 8px; }
 
 .map-desc { margin: 70px 0 0 40px; }
 
+@media screen and (max-device-width: 1300px) {
+  .fifth-page { padding-right: 10px; }
+}
 
 @media screen and (max-device-width: 670px) {
   body {
@@ -177,8 +189,8 @@ td { padding: 3px 8px 3px 8px; }
   }
   .br-pc { display: none; }
   .card { padding: 0; }
-  .card-head { font-size: 64px; }
-  .and { display: block; }
+  .card-head { font-size: 84px; }
+  .plus { display: block; margin-top: 15px; }
   .card-date { font-size: 30px; }
   .card-time { display: block; }
   table { font-size: 26px !important; }
@@ -228,6 +240,12 @@ td { padding: 3px 8px 3px 8px; }
   }
 
   .fifth-page { padding: 40px 2px; }
+  .dress-code-content { flex-direction: column; }
+  .rustic-pc { display: none; }
+  .rustic-mobile {
+    display: initial;
+    height: 300px;
+  }
 
   /* Sixth page */
   .sixth-page { 
