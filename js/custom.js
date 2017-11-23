@@ -1,21 +1,4 @@
 function setGuests() {
-  var guestArr = [{
-      names: ['Гости'],
-      sex: 'p',
-    }, {
-      names: ['Мама', 'Папа'],
-      sex: 'p',
-    }, {
-      names: ['Максим'],
-      sex: 'm',
-    }, {
-      names: ['Леночка', 'Саша', 'Ваня'],
-      sex: 'p',
-    }, {
-      names: ['Маша'],
-      sex: 'f',
-    }
-  ]
   var guestId = +window.location.search.substr(4)
   var guests = guestArr[guestId] || guestArr[0]
   var dearEl = document.getElementById('dear')
@@ -24,7 +7,7 @@ function setGuests() {
   var guestEl3 = document.getElementById('guest3')
   var delim1 = document.getElementById('delim1')
   var delim2 = document.getElementById('delim2')
-  if (guests.names.length > 1 || guests.sex === 'p') {
+  if (guests.names.length > 1) {
     dearEl.textContent  = 'Дорогие'
     for (var j=0; j < guests.names.length; j++) {
       if (j == 0 && guests.names.length === 1) {
@@ -48,10 +31,19 @@ function setGuests() {
       }
     }
   } else {
-    if (guests.sex == 'm') {
+    if (guests.names[0] == 'Лера' ||
+        guests.names[0] == 'Аня' ||
+        guests.names[0] == 'Оля' ||
+        guests.names[0] == 'Маша' ||
+        guests.names[0] == 'Александра') {
+      dearEl.textContent  = 'Дорогая'
+    } else if (guests.names[0] == 'Вова' ||
+               guests.names[0] == 'Коля' ||
+               guests.names[0] == 'Максим' ||
+               guests.names[0] == 'дедушка Ваня') {
       dearEl.textContent  = 'Дорогой'
     } else {
-      dearEl.textContent  = 'Дорогая'
+      dearEl.textContent  = 'Дорогие'
     }
     guestEl1.textContent  = ''
     guestEl2.textContent  = ''
