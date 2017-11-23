@@ -1,4 +1,4 @@
 # WeddingLanding
 Wedding invitation website.
 
-Dependencies - JQuery, Slick.
+Dependencies - JQuery
