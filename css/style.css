@@ -1,3 +1,4 @@
+/* STYLES FOR DESKTOP */
 body {
   margin: 0;
   font-size: 30px;
@@ -5,56 +6,55 @@ body {
   font-family: Gotham Pro;
 }
 
-h1, h2, h3, h4 { font-family: Nautilus; }
-
-h1 { font-weight: 100; }
+h1 {
+  font-family: Nautilus;
+  font-weight: 100;
+}
 
 /* First page */
-.first-page {
+.first {
   color: white;
-  padding: 10px 10px 10px 10px;
-  margin: 0;
+  padding: 10px;
   background-image: url('../img/bg1-2.png');
   background-size: cover;
 }
 
-.card {
+.first-card {
   padding-top: 35px;
   text-align: center;
   font-family: Nautilus;
 }
 
-.card-head {
-  /*font-family: 'Playfair Display', serif;*/
+.first-card-head {
   font-family: 'Corinthia', serif;
   font-size: 120px;
   margin-top: 30px;
 }
 
-.plus {
+.first-card-head-plus {
   font-weight: 200;
   margin: 0 5px;
 }
 
-.card-date {
+.first-card-date {
   margin-top: 70px;
   font-size: 46px;
 }
 
-.first-page-footer {
+.first-footer {
   background-image: url('../img/bg1-3.png');
   height: 150px;
   background-size: cover;
 }
 
-.table-wrapper {
+.first-table-wrapper {
   background-color: #f8f8f8;
   background-image: url('../img/snow.png');
   padding: 20px; 
   font-family: Nautilus;
 }
 
-table {
+.first-table {
   color: black;
   font-size: 42px !important;
   outline: none;
@@ -64,63 +64,63 @@ table {
   font-size: inherit;
 }
 
-td { padding: 3px 8px 3px 8px; }
+.first-table td { padding: 3px 8px 3px 8px; }
 
-.colon { width: 10px; }
+.first-table-colon { width: 10px; }
 
 /* Second page */
-.second-page {
+.second {
   display: flex;
   flex-direction: column;
 }
 
-.first-subpage {
+.second-photos-bg {
   background-image: url('../img/bg2.png');
   background-size: cover;
   height: 380px;
 }
 
-.second-subpage {
-  background-color: #f8f8f8;
-  background-image: url('../img/snow.png');
-}
-
-.pal-photos {
+.second-photos {
   width: 700px;
   align-self: center;
   position: absolute;
   z-index: 0;
 }
 
-.subpage-content {
+.second-content {
+  background-color: #f8f8f8;
+  background-image: url('../img/snow.png');
   display: flex;
   padding: 40px 0;
   justify-content: center;
 }
 
-.person {
+.second-content-person {
   width: 300px;
   margin: 0 20px;
+  text-align: left;
   z-index: 1;
 }
 
-.person-desc { text-align: left; }
-
-.desc-head {
+.second-content-person-head {
   font-size: 36px;
   font-weight: 700;
   font-family: 'Corinthia', serif;
   font-size: 60px;
 }
 
-.desc-desc {
+.second-content-person-desc {
   margin-top: 20px;
   font-size: 18px;
   line-height: 20px;
 }
 
-/* Fourth page */
-.fourth-page {
+.second-content-person-desc-title { font-size: 24px; }
+
+.second-content-person-desc-text { text-align: left; }
+
+/* Third page */
+.third {
   padding: 40px 10px;
   padding-left: 30%;
   background-image: url('../img/bg3.png');
@@ -128,22 +128,30 @@ td { padding: 3px 8px 3px 8px; }
   color: white;
 }
 
-.invitation { text-align: center; line-height: 50px; }
-.invitation-text { font-weight: bold; }
-.invitation-date { font-size: 38px; }
+.third-invitation {
+  text-align: center;
+  line-height: 50px;
+}
 
-/* Four and a half */
-.rope-photos {
+.third-invitation-text { font-weight: bold; }
+
+.third-invitation-text-date { font-size: 38px; }
+
+/* Fourth page */
+.fourth {
   background-color: #f8f8f8;
   background-image: url('../img/snow.png');
   display: flex;
   flex-direction: column;
   padding-bottom: 30px;
 }
-.collage { display: none; }
+
+.fourth-mob { display: none; }
+
+.fourth-image { width: 100%; }
 
 /* Fifth page */
-.fifth-page {
+.fifth {
   color: white;
   padding: 30px 10px;
   padding-right: 20%;
@@ -151,14 +159,27 @@ td { padding: 3px 8px 3px 8px; }
   background-size: cover;
 }
 
-.dress-code { text-align: center; }
-.dress-code-text { font-weight: bold; }
-.dress-code-content { display: flex; }
-.rustic-pc { align-self: center; }
-.rustic-mobile { display: none; }
+.fifth-code { text-align: center; }
+
+.fifth-code-head {
+  font-family: Nautilus;
+  font-size: 32px;
+}
+.fifth-code-content-text {
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.fifth-code-content { display: flex; }
+
+.fifth-code-content-rustic-pc { align-self: center; }
+
+.fifth-code-content-rustic-mob { display: none; }
+
+.fifth-code-content-rustic-mob-img { width: 300px; }
 
 /* Sixth page */
-.sixth-page {
+.sixth {
   background-color:#f8f8f8;
   background-image: url('../img/snow.png');
   padding: 0 10px;
@@ -167,103 +188,125 @@ td { padding: 3px 8px 3px 8px; }
   line-height: 50px;
 }
 
-.map-script-pc { display: initial; }
-.map-script-mobile { display: none; }
+.sixth-map-pc { display: initial; }
 
-.map-desc {
+.sixth-map-mob { display: none; }
+
+.sixth-map-mob-content { align-self: center; }
+
+.sixth-desc {
   margin: auto 40px;
   font-size: 24px;
   line-height: 70px;
 }
 
+.sixth-desc-comm { font-size: 20px; }
+
+/* STYLES FOR TABLET */
 @media screen and (max-device-width: 1300px) {
   .fifth-page { padding-right: 10px; }
 }
 
+/* STYLES FOR MOBILE */
 @media screen and (max-device-width: 670px) {
   body {
     font-size: 24px;
     line-height: 50px;
   }
 
+  .br-pc { display: none; }
+
   /* First page */
-  .first-page { 
-    padding: 30px 0;
+  .first {
+    padding: 20px 0;
     line-height: 40px;
   }
-  .br-pc { display: none; }
-  .card { padding: 0; }
-  .card-head { font-size: 84px; margin-top: 15px; }
-  .plus { display: block; margin-top: 15px; }
-  .card-date { font-size: 30px; }
-  .card-time { display: block; }
-  table { font-size: 26px !important; }
-  td { padding: 0; }
+  
+  .first-card { padding: 0; }
+
+  .first-card-head {
+    font-size: 84px;
+    margin-top: 20px;
+  }
+
+  .first-card-head-plus {
+    display: block;
+    margin-top: 15px;
+  }
+
+  .first-card-date { font-size: 30px; }
+
+  .first-card-time { display: block; }
+
+  .first-table { font-size: 26px !important; }
+
+  .first-table td { padding: 0; }
 
   /* Second page */
-  .second-page { flex-direction: column; }
-  .person { margin-bottom: 20px; }
+  .second { flex-direction: column; }
+
+  .second-photos {
+    width: 100%;
+    position: relative;
+    margin-top: -340px;
+  }
+
+  .second-content-person { margin-bottom: 20px; }
+
+  .second-photos-bg { height: 330px; }
+
+  .second-content { flex-direction: column; }
   
   /* Third page */
-  .photo-slider { display: none; }
-  .photo-static { display: initial; }
-  
-  .first-photo-line, .third-photo-line {
-    display: flex;
-    justify-content: space-around;
-  }  
-  .second-photo-line {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
-  }
-
-  .photo {
-    width: 45%;
-    align-self: center;
-  }
-
-  .first-subpage { height: 330px; }
-  .pal-photos { width: 100%; position: relative; margin-top: -340px; }
-
-  .subpage-content { flex-direction: column; }
-
-  /* Fourth page */
-  .fourth-page {
+  .third {
     padding: 10px;
     background-image: url('../img/bg1-2.png');
     background-size: cover;
   }
-  .invitation { line-height: 40px; }
-  .invitation-date { font-size: 28px; }
 
-  .rope-photos { display: none; }
-  .collage {
+  .third-invitation { line-height: 40px; }
+
+  .third-invitation-text-date { font-size: 28px; }
+
+  /* Fourth page */
+  .fourth-pc { display: none; }
+  
+  .fourth-mob {
     display: block;
     background-color:#f8f8f8;
     background-image: url('../img/snow.png');
   }
 
-  .fifth-page { padding: 20px 2px; }
-  .dress-code-content { flex-direction: column; }
-  .rustic-pc { display: none; }
-  .rustic-mobile {
-    display: initial;
+  /* Fifth page */
+  .fifth { padding: 20px 2px; }
 
-  }
+  .fifth-code-head { font-size: 34px; }
+
+  .fifth-code-content { flex-direction: column; }
+
+  .fifth-code-content-rustic-pc { display: none; }
+
+  .fifth-code-content-rustic-mob { display: initial; }
 
   /* Sixth page */
-  .sixth-page { 
+  .sixth {
     flex-direction: column;
     padding: 0;
     justify-content: center;
     align-items: center;
   }
-  .map-script-pc { display: none; }
-  .map-script-mobile { 
+
+  .sixth-map-pc { display: none; }
+
+  .sixth-map-mob {
     display: initial;
     align-self: center;
     margin: 0 auto;
   }
-  .map-desc { margin: 20px 10px 0 10px; text-align: center; line-height: 40px; }
+
+  .sixth-desc {
+    margin: 20px 10px 0 10px;
+    text-align: center;
+    line-height: 40px;
+  }
 }
