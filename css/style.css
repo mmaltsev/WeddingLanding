@@ -224,6 +224,8 @@ h1 {
     -webkit-margin-after: 20px;
   }
 
+  h1 { line-height: 50px; }
+
   /* First page */
   .first {
     padding: 20px 0;
