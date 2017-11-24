@@ -1,3 +1,8 @@
+window.onload = () => {
+  setGuests()
+  setCounter()
+}
+
 function setGuests() {
   var guestId = +window.location.search.substr(4)
   var guests = guestArr[guestId] || guestArr[0]
@@ -59,7 +64,7 @@ function setCounter() {
   }, 30000)
   
   setInterval(function() {
-    var colons = document.getElementsByClassName('colon')
+    var colons = document.getElementsByClassName('first-table-colon')
     for (var i = 0; i < colons.length; i ++) {
       if (colons[i].textContent  === ':') colons[i].textContent  = ''
       else colons[i].textContent  = ':'

@@ -7,24 +7,6 @@
   font-family: "Gotham Pro";
   src: url("fonts/gothampro/gothampro.ttf");
 }
-  
-/* cyrillic Playfair Display*/
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Playfair Display'), local('PlayfairDisplay-Regular'), url(fonts/playfairdisplay/playfairdisplay.woff2) format('woff2');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-
-/* Slick Icons */
-@font-face {
-  font-family: 'Slick';
-  font-weight: normal;
-  font-style: normal;
-  src: url('fonts/slick/slick.eot');
-  src: url('fonts/slick/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick/slick.woff') format('woff'), url('./fonts/slick/slick.ttf') format('truetype'), url('./fonts/slick/slick.svg#slick') format('svg');
-}
 
 /* Corinthia */
 @font-face {
